@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Mejores Recetas</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="cards-bg">
+  <div *ngFor="let receta1 of recetas">
+    <ion-card>
+      <ion-item>
+        <ion-icon name="md-cafe" item-start large></ion-icon>
+        <h2>{{ receta1.DEPARTMENTO }}</h2>
+        <p>{{ receta1.ENERGIA}}</p>
+      </ion-item>
+      <ion-item>
+        <span item-start>{{receta1.HIERRO}}</span>
+        <span item-start>{{receta1.PROTEINA}}</span>
+        <span item-start>{{receta1.RECETA}}</span>
+        <span item-start>{{receta1.RETINOL}}</span>
+        <span item-start>{{receta1.RINDE}}</span>
+        <button ion-button icon-start clear item-end>
+          <ion-icon name="navigate"></ion-icon>
+          PDF
+        </button>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

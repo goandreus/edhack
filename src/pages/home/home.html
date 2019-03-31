@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Desayunos</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="cards-bg">
+  <div *ngFor="let desayuno1 of desayunos">
+      <ion-card>
+      <img src="{{desayuno1.FOTO}}">
+      <ion-item>
+        <ion-icon name="md-cafe" item-start large></ion-icon>
+        <h2>{{ desayuno1.DIA }}</h2>
+        <p>{{ desayuno1.ENERGIA}}</p>
+      </ion-item>
+      <ion-item>
+        <span item-start>{{desayuno1.HIERRO}}</span>
+        <span item-start>{{desayuno1.NIVEL}}</span>
+        <span item-start>{{desayuno1.PROTEINAS}}</span>
+        <button ion-button icon-start clear item-end>
+          <ion-icon name="navigate"></ion-icon>
+          Detalle
+        </button>
+      </ion-item>
+      </ion-card>
+  </div>
+</ion-content>
